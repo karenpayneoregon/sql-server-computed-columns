@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FC34420D-C4D9-4534-88E2-2C4C6DE14329}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkCore", "EntityFrameworkCore\EntityFrameworkCore.csproj", "{E18B507F-577F-438A-B103-2F37055CF4B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlDataProviders", "SqlDataProviders\SqlDataProviders.csproj", "{31D13FE2-D03E-477D-B264-154C27221765}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E18B507F-577F-438A-B103-2F37055CF4B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E18B507F-577F-438A-B103-2F37055CF4B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E18B507F-577F-438A-B103-2F37055CF4B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E18B507F-577F-438A-B103-2F37055CF4B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31D13FE2-D03E-477D-B264-154C27221765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31D13FE2-D03E-477D-B264-154C27221765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31D13FE2-D03E-477D-B264-154C27221765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31D13FE2-D03E-477D-B264-154C27221765}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80637860-4D20-4E44-9F5C-F997BA0DBE41}
+	EndGlobalSection
+EndGlobal

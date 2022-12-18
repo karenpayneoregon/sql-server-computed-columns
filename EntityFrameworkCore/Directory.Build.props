@@ -1,0 +1,10 @@
+﻿<Project>
+	<PropertyGroup>
+		<Version>1.0</Version>
+		<FileVersion>1.0.0.0</FileVersion>
+		<Product>Code sample</Product>
+		<Company>Karen Payne</Company>
+		<Copyright>Created by Karen Payne MVP use freely</Copyright>
+		<NeutralLanguage>en</NeutralLanguage>
+	</PropertyGroup>
+</Project>
