@@ -1,10 +1,17 @@
 # SQL-Server: Computed columns
 
+
+
 ## What is a Computed Column?
 
 A [Computed Column](https://learn.microsoft.com/en-us/sql/relational-databases/tables/specify-computed-columns-in-a-table?view=sql-server-ver16) is a column whose values are derived or computed by an expression. The expression might be a constant, function or combination of values from one or more columns in the same table. 
 
 The code samples provided are based on an expressions with emphasis for [EF Core](https://learn.microsoft.com/en-us/ef/core/) while provides a data provider sample also.
+
+
+Sample from code samples to get a year from the column BirthYear.
+
+![Screen1](assets/screen1.png)
 
 ## Limitations and Restrictions
 
@@ -13,6 +20,10 @@ The code samples provided are based on an expressions with emphasis for [EF Core
 - A computed column cannot be used as a DEFAULT or FOREIGN KEY constraint definition or with a NOT NULL constraint definition. However, if the computed column value is defined by a deterministic expression and the data type of the result is allowed in index columns, a computed column can be used as a key column in an index or as part of any PRIMARY KEY or UNIQUE constraint. For example, if the table has integer columns a and b, the computed column a + b may be indexed, but computed column a + DATEPART(dd, GETDATE()) cannot be indexed, because the value might change in subsequent invocations.
 - A computed column cannot be the target of an INSERT or UPDATE statement.
 - `SET QUOTED_IDENTIFIER` must be ON when you are creating or changing indexes on computed columns or indexed views. For more information, see [SET QUOTED_IDENTIFIER](https://learn.microsoft.com/en-us/sql/t-sql/statements/set-quoted-identifier-transact-sql?view=sql-server-ver16) (Transact-SQL).
+
+
+> **Note**
+> When a formula combines two expressions of different data types, the rules for data type precedence specify that the data type with the lower precedence is converted to the data type with the higher precedence. If the conversion is not a supported implicit conversion, the error **Error validating the formula for column column_name.** is returned. Use the CAST or CONVERT function to resolve the data type conflict. 
 
 # Add a new computed column
 
