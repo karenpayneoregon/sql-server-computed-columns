@@ -31,7 +31,7 @@ Sample from code samples to get a year from the column BirthYear.
 
 
 
-Note this can be done with EF Core also. Given the following model
+**Note** this can be done with EF Core also. Given the following model
 
 ```csharp
 public partial class Contact
@@ -130,6 +130,12 @@ Computed columns are very powerful. Entity Framework Core with its fluent API al
 
 Microsoft Visual Studio 2022 version 17.4 or higher
 
+# NuGet packages
+
+- [ConfigurationLibrary](https://www.nuget.org/packages/ConfigurationLibrary/) is used for obtaining connection strings from `appsettings` in both projects. This is a great solution when not using dependency injection.
+- [Spectre.Console](https://www.nuget.org/packages/Spectre.Console/0.45.1-preview.0.47) for enhanced console writting.
+
+
 # You also might like
 
 - [EF Core 7 code sample](https://github.com/karenpayneoregon/ef-core-7-samples)
@@ -139,3 +145,5 @@ Microsoft Visual Studio 2022 version 17.4 or higher
 # Summary
 
 This repository contents provide working code samples focused on using computed columns with EF Core and for those using a data provider [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient) for instance computed columns work too.
+
+:small_blue_diamond: Not all possiblities are presented, code sample have been kept simple for the sake of easy learning.
