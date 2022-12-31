@@ -46,7 +46,7 @@ internal partial class Program
             .AddColumn("[cyan]Major[/]")
             .AddColumn("[cyan]Minor[/]")
             .AddColumn("[cyan]Build[/]")
-            .AddColumn("[cyan]Revison[/]")
+            .AddColumn("[cyan]Revision[/]")
             .Alignment(Justify.Left)
             .BorderColor(Color.LightSlateGrey)
             .Title("[LightGreen]Application versions[/]");
