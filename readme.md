@@ -139,7 +139,7 @@ Microsoft Visual Studio 2022 version 17.4 or higher
 # You also might like
 
 - [EF Core 7 code sample](https://github.com/karenpayneoregon/ef-core-7-samples)
-- SQL-Server: [Exploration of datetime2(7) precision](https://github.com/karenpayneoregon/sql-server-datetime2)
+- [SQL-Server: Exploration of datetime2(7) precision](https://github.com/karenpayneoregon/sql-server-datetime2)
 - [EF Core: Working with TimeOnly](https://github.com/karenpayneoregon/ef-core-dateonly-timeonly)
 - [Storing passwords in SQL-Server database](https://github.com/karenpayneoregon/sql-server-password-secure)
 
