@@ -1,4 +1,5 @@
 ﻿using EntityFrameworkCore2.Data;
+using VersioningLibrary;
 
 namespace EntityFrameworkCore2;
 
@@ -32,6 +33,17 @@ internal partial class Program
             var firstApp = apps.FirstOrDefault();
             Version version = new Version(firstApp!.TheVersion);
             AnsiConsole.MarkupLine($"[cyan]{firstApp.Id,-3}{firstApp.AppName,-10}[/][yellow]{version}[/]");
+
+            Console.WriteLine();
+            AnsiConsole.MarkupLine("[cyan]Increment revision[/]");
+            version = version.IncrementRevision(3);
+            AnsiConsole.MarkupLine($"[white]{version}[/]");
+
+            Console.WriteLine();
+            AnsiConsole.MarkupLine("[cyan]Increment major[/]");
+            version = version.IncrementMajor(1);
+            AnsiConsole.MarkupLine($"[white]{version}[/]");
+
 
         }
 

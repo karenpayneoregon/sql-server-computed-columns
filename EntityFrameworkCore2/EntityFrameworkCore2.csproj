@@ -44,4 +44,8 @@
 	  <Folder Include="Scripts\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\VersioningLibrary\VersioningLibrary.csproj" />
+	</ItemGroup>
+
 </Project>
