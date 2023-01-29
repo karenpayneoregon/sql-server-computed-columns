@@ -25,7 +25,7 @@ Sample from code samples to get a year from the column BirthYear.
 > **Note**
 > When a formula combines two expressions of different data types, the rules for data type precedence specify that the data type with the lower precedence is converted to the data type with the higher precedence. If the conversion is not a supported implicit conversion, the error **Error validating the formula for column column_name.** is returned. Use the CAST or CONVERT function to resolve the data type conflict. 
 
-# Add a new computed column
+## Add a new computed column
 
 *Microsoft* SSMS [docs](https://learn.microsoft.com/en-us/sql/relational-databases/tables/specify-computed-columns-in-a-table?view=sql-server-ver16#SSMSProcedure) using [SSMS](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16) (SQL-Server Management Studio)
 
@@ -121,11 +121,59 @@ private static void FindByFullName()
 
 ## EF Core working with Version class
 
-
-
 Computed columns are very powerful. Entity Framework Core with its fluent API allows them to be easily added. Before using computed columns in production databases run test in SSMS on larger datasets than you would normally run, determine if performance is acceptable along with testing with proper indices.
 
-# See also
+
+This code sample shows storing version information in a SQL-Server database table.
+
+Since each part of the version are stored as int you can take those column values and create a [Version](https://learn.microsoft.com/en-us/dotnet/api/system.version?view=net-7.0) object or use `TheVersion` column for display purposes.
+
+![1](EntityFrameworkCore2/assets/figure2.png)
+
+![2](EntityFrameworkCore2/assets/Figure1.png)
+
+![3](EntityFrameworkCore2/assets/figure3.png)
+
+
+### Incrementing version parts
+
+To keep code clean we have extension methods in a class project.
+
+```csharp
+public static class Extensions
+{
+    public static Version IncrementMajor(this Version sender, int increment = 1) 
+        => new(sender.Major + increment, sender.Minor, sender.Build, sender.Revision);
+
+    public static Version IncrementMinor(this Version sender, int increment = 1) 
+        => new (sender.Major, sender.Minor + increment, sender.Build, sender.Revision);
+
+    public static Version IncrementBuild(this Version sender, int increment = 1) 
+        => new (sender.Major, sender.Minor, sender.Build + increment, sender.Revision);
+
+    public static Version IncrementRevision(this Version sender, int increment = 1) 
+        => new (sender.Major, sender.Minor, sender.Build, sender.Revision + increment);
+}
+```
+
+Get a record
+
+```csharp
+using var context = new Context();
+ApplicationSettings firstApp = context.ApplicationSettings.FirstOrDefault();
+Version version = new Version(firstApp!.TheVersion);
+```
+
+Increment a part
+
+```csharp
+version = version.IncrementMajor(1);
+firstApp.VersionMajor = version.Major;
+```
+
+
+
+## See also
 
 - EF Core [Computed columns](https://learn.microsoft.com/en-us/ef/core/modeling/generated-properties?tabs=data-annotations#computed-columns)
 - [FORMAT is a convenient but expensive SQL Server function](https://www.mssqltips.com/sqlservertip/7145/sql-date-format-comparison-computed-column-materialized-column/)
