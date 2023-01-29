@@ -1,13 +1,12 @@
 # SQL-Server: Computed columns
 
+![title](assets/ArticleTitle.png)
 
 ## What is a Computed Column?
 
 A [Computed Column](https://learn.microsoft.com/en-us/sql/relational-databases/tables/specify-computed-columns-in-a-table?view=sql-server-ver16) is a column whose values are derived or computed by an expression. The expression might be a constant, function or combination of values from one or more columns in the same table. 
 
 The code samples provided are based on an expressions with emphasis for [EF Core](https://learn.microsoft.com/en-us/ef/core/) while provides a data provider sample also.
-
-
 
 
 Sample from code samples to get a year from the column BirthYear.
@@ -29,7 +28,6 @@ Sample from code samples to get a year from the column BirthYear.
 ## Add a new computed column
 
 *Microsoft* SSMS [docs](https://learn.microsoft.com/en-us/sql/relational-databases/tables/specify-computed-columns-in-a-table?view=sql-server-ver16#SSMSProcedure) using [SSMS](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16) (SQL-Server Management Studio)
-
 
 
 **Note** this can be done with EF Core also. Given the following model
