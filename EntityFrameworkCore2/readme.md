@@ -4,6 +4,8 @@ This code sample shows storing version information in a SQL-Server database tabl
 
 Since each part of the version are stored as int you can take those column values and create a [Version](https://learn.microsoft.com/en-us/dotnet/api/system.version?view=net-7.0) object or use `TheVersion` column for display purposes.
 
+:stop_sign: run this script before running this project [Script](Scripts/script.sql)
+
 ![Figure2](assets/figure2.png)
 
 ---

@@ -5,6 +5,8 @@ This example is how do I store an incoming decimal value with precision of 6 to 
 - Option 1, use Math.Round
 - Option 2, create a computed column as shown below.
 
+:stop_sign: run this script before running this project [Script](Scripts/Script.sql)
+
 
 ![Figure1](assets/figure1.png)
 

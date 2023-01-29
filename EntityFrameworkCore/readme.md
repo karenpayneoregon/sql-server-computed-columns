@@ -2,6 +2,8 @@
 
 This project shows how to use computed columns for SQL-Server. See the main readme file for details.
 
+:stop_sign: run this script before running this project [Create](Scripts/Create.sql)
+
 ![Screen](assets/screen.png)
 
 ```csharp
