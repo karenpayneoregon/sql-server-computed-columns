@@ -1,12 +1,13 @@
 # SQL-Server: Computed columns
 
 
-
 ## What is a Computed Column?
 
 A [Computed Column](https://learn.microsoft.com/en-us/sql/relational-databases/tables/specify-computed-columns-in-a-table?view=sql-server-ver16) is a column whose values are derived or computed by an expression. The expression might be a constant, function or combination of values from one or more columns in the same table. 
 
 The code samples provided are based on an expressions with emphasis for [EF Core](https://learn.microsoft.com/en-us/ef/core/) while provides a data provider sample also.
+
+
 
 
 Sample from code samples to get a year from the column BirthYear.
@@ -128,6 +129,8 @@ This code sample shows storing version information in a SQL-Server database tabl
 
 Since each part of the version are stored as int you can take those column values and create a [Version](https://learn.microsoft.com/en-us/dotnet/api/system.version?view=net-7.0) object or use `TheVersion` column for display purposes.
 
+Table definition
+
 ![1](EntityFrameworkCore2/assets/figure2.png)
 
 ![2](EntityFrameworkCore2/assets/Figure1.png)
@@ -187,13 +190,19 @@ Microsoft Visual Studio 2022 version 17.4 or higher
 - [ConfigurationLibrary](https://www.nuget.org/packages/ConfigurationLibrary/) is used for obtaining connection strings from `appsettings` in both projects. This is a great solution when not using dependency injection.
 - [Spectre.Console](https://www.nuget.org/packages/Spectre.Console/0.45.1-preview.0.47) for enhanced console writting.
 
+## Computed Column Performance in SQL Server
+
+In many cases, non-persistent computed columns put too much burden on the processor, resulting in slower queries and unresponsive applications. Fortunately, SQL Server provides several strategies for improving computed column performance. You can create persisted computed columns, index the computed columns, or do both.
+
+:eyeglasses:  [Continue reading](https://www.red-gate.com/simple-talk/databases/sql-server/performance-sql-server/computed-column-performance-in-sql-server/)...
 
 # You also might like
 
 - [EF Core 7 code sample](https://github.com/karenpayneoregon/ef-core-7-samples)
 - [SQL-Server: Exploration of datetime2(7) precision](https://github.com/karenpayneoregon/sql-server-datetime2)
 - [EF Core: Working with TimeOnly](https://github.com/karenpayneoregon/ef-core-dateonly-timeonly)
-- [Storing passwords in SQL-Server database](https://github.com/karenpayneoregon/sql-server-password-secure)
+- [Storing passwords in SQL-Server database](https://dev.to/karenpayneoregon/passwords-in-sql-server-c-1fhf)
+- [Learn DateOnly & TimeOnly](https://dev.to/karenpayneoregon/learn-dateonly-timeonly-23j0)
 
 # Summary
 
