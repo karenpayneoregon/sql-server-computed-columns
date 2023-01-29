@@ -119,6 +119,10 @@ private static void FindByFullName()
 }
 ```
 
+## EF Core working with Version class
+
+
+
 Computed columns are very powerful. Entity Framework Core with its fluent API allows them to be easily added. Before using computed columns in production databases run test in SSMS on larger datasets than you would normally run, determine if performance is acceptable along with testing with proper indices.
 
 # See also

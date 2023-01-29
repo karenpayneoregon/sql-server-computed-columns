@@ -1,6 +1,7 @@
 ﻿using EntityFrameworkCore.Data;
 using EntityFrameworkCore.Models;
 using Spectre.Console;
+using Spectre.Library;
 
 namespace EntityFrameworkCore;
 
@@ -20,7 +21,7 @@ internal partial class Program
         FindByFullName();
         Console.WriteLine();
 
-        AnsiConsole.MarkupLine("[white on blue]Press ENTER to exit[/]");
+        Prompts.ExitPrompt();
         Console.ReadLine();
 
     }

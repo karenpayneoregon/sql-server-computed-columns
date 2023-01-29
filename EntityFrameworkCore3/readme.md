@@ -1,6 +1,6 @@
 ﻿# About
 
-This example is  how do I store an incoming decimal value with precision of 6 to precision of 2. 
+This example is how do I store an incoming decimal value with precision of 6 to precision of 2. 
 
 - Option 1, use Math.Round
 - Option 2, create a computed column as shown below.

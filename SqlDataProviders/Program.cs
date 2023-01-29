@@ -1,4 +1,5 @@
-﻿using SqlDataProviders.Classes;
+﻿using Spectre.Library;
+using SqlDataProviders.Classes;
 using SqlDataProviders.Models;
 
 namespace SqlDataProviders;
@@ -14,6 +15,7 @@ internal partial class Program
 
         ReadForRetirement();
 
+        Prompts.ExitPrompt();
         Console.ReadLine();
     }
 

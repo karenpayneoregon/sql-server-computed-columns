@@ -1,4 +1,5 @@
 ﻿using EntityFrameworkCore1.Data;
+using Spectre.Library;
 
 namespace EntityFrameworkCore1;
 
@@ -17,7 +18,7 @@ internal partial class Program
                 Console.WriteLine(person.DisplayName);
             }
         }
-        AnsiConsole.MarkupLine("[yellow]Hello[/]");
+        Prompts.ExitPrompt();
         Console.ReadLine();
     }
 }

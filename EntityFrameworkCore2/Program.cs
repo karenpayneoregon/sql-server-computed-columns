@@ -1,4 +1,6 @@
 ﻿using EntityFrameworkCore2.Data;
+using Microsoft.EntityFrameworkCore;
+using Spectre.Library;
 using VersioningLibrary;
 
 namespace EntityFrameworkCore2;
@@ -44,9 +46,18 @@ internal partial class Program
             version = version.IncrementMajor(1);
             AnsiConsole.MarkupLine($"[white]{version}[/]");
 
+            AnsiConsole.MarkupLine("[yellow]Updating[/]");
+            firstApp.VersionMajor = version.Major;
+            firstApp.VersionRevison = version.Revision;
+            context.Entry(firstApp).State = EntityState.Modified;
+            context.SaveChanges();
+
+            var modified = context.ApplicationSettings.FirstOrDefault();
+            AnsiConsole.MarkupLine($"[cyan]Updated to[/] [white]{modified.TheVersion}[/]");
 
         }
 
+        Prompts.ExitPrompt();
         Console.ReadLine();
 
     }

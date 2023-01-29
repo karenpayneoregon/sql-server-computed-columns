@@ -45,6 +45,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\Spectre.Library\Spectre.Library.csproj" />
 	  <ProjectReference Include="..\VersioningLibrary\VersioningLibrary.csproj" />
 	</ItemGroup>
 
