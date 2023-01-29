@@ -1,6 +1,6 @@
 ﻿# About
 
-In this example we are summing up `UnitPrice` * `Quantity` into computed column `RowTotal`
+In this example we are summing up `UnitPrice` <kbd>*</kbd> `Quantity` into computed column `RowTotal`
 
 
 :stop_sign: run this script before running this project [Script](Scripts/Script.sql)
