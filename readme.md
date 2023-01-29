@@ -210,11 +210,11 @@ public partial class OrderDetailsConfiguration :
 - EF Core [Computed columns](https://learn.microsoft.com/en-us/ef/core/modeling/generated-properties?tabs=data-annotations#computed-columns)
 - [FORMAT is a convenient but expensive SQL Server function](https://www.mssqltips.com/sqlservertip/7145/sql-date-format-comparison-computed-column-materialized-column/)
 
-# Required
+## Required
 
 Microsoft Visual Studio 2022 version 17.4 or higher
 
-# NuGet packages
+## NuGet packages
 
 - [ConfigurationLibrary](https://www.nuget.org/packages/ConfigurationLibrary/) is used for obtaining connection strings from `appsettings` in both projects. This is a great solution when not using dependency injection.
 - [Spectre.Console](https://www.nuget.org/packages/Spectre.Console/0.45.1-preview.0.47) for enhanced console writting.
@@ -225,7 +225,7 @@ In many cases, non-persistent computed columns put too much burden on the proces
 
 :eyeglasses:  [Continue reading](https://www.red-gate.com/simple-talk/databases/sql-server/performance-sql-server/computed-column-performance-in-sql-server/)...
 
-# You also might like
+## You also might like
 
 - [EF Core 7 code sample](https://github.com/karenpayneoregon/ef-core-7-samples)
 - [SQL-Server: Exploration of datetime2(7) precision](https://github.com/karenpayneoregon/sql-server-datetime2)
@@ -233,7 +233,9 @@ In many cases, non-persistent computed columns put too much burden on the proces
 - [Storing passwords in SQL-Server database](https://dev.to/karenpayneoregon/passwords-in-sql-server-c-1fhf)
 - [Learn DateOnly & TimeOnly](https://dev.to/karenpayneoregon/learn-dateonly-timeonly-23j0)
 
-# Summary
+
+
+## Summary
 
 This repository contents provide working code samples focused on using computed columns with EF Core and for those using a data provider [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient) for instance computed columns work too.
 
