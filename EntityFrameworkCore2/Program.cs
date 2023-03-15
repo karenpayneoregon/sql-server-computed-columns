@@ -59,7 +59,6 @@ internal partial class Program
         ApplicationSettings app1 = new ApplicationSettings()
         {
             AppName = "App3", VersionMajor = 3, VersionMinor = 2, VersionRevison = 22, Identifier = 3
-
         };
 
         context.Add(app1);
