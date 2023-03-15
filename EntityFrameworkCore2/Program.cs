@@ -55,6 +55,16 @@ internal partial class Program
         var modified = context.ApplicationSettings.FirstOrDefault();
         AnsiConsole.MarkupLine($"[cyan]Updated to[/] [white]{modified.TheVersion}[/]");
 
+        // insert a new record
+        ApplicationSettings app1 = new ApplicationSettings()
+        {
+            AppName = "App3", VersionMajor = 3, VersionMinor = 2, VersionRevison = 22, Identifier = 3
+
+        };
+
+        context.Add(app1);
+        Console.WriteLine($"Saved result: {context.SaveChanges()}");
+
         Prompts.ExitPrompt();
         Console.ReadLine();
 

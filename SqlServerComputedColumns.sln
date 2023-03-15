@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FC34420D-C4D9-4534-88E2-2C4C6DE14329}"
 	ProjectSection(SolutionItems) = preProject
 		readme.md = readme.md
+		Stash.txt = Stash.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkCore", "EntityFrameworkCore\EntityFrameworkCore.csproj", "{E18B507F-577F-438A-B103-2F37055CF4B1}"
@@ -26,9 +27,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Class projects", "Class pro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VersioningLibrary", "VersioningLibrary\VersioningLibrary.csproj", "{2A6C115E-3E13-4769-9008-3B37C4D11E07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spectre.Library", "Spectre.Library\Spectre.Library.csproj", "{6B7D73F1-FF78-4E5D-AEFE-B1CB90F76577}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spectre.Library", "Spectre.Library\Spectre.Library.csproj", "{6B7D73F1-FF78-4E5D-AEFE-B1CB90F76577}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkCore4", "EntityFrameworkCore4\EntityFrameworkCore4.csproj", "{5BA913DD-1427-493B-931E-05737DA7C808}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkCore4", "EntityFrameworkCore4\EntityFrameworkCore4.csproj", "{5BA913DD-1427-493B-931E-05737DA7C808}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
