@@ -53,7 +53,7 @@ internal partial class Program
         context.SaveChanges();
 
         var modified = context.ApplicationSettings.FirstOrDefault();
-        AnsiConsole.MarkupLine($"[cyan]Updated to[/] [white]{modified.TheVersion}[/]");
+        AnsiConsole.MarkupLine($"[cyan]Updated to[/] [white]{modified!.TheVersion}[/]");
 
         // insert a new record
         ApplicationSettings app1 = new ApplicationSettings()
