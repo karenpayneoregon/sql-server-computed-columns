@@ -18,7 +18,7 @@ internal partial class Program
                 Console.WriteLine(person.DisplayName);
             }
         }
+
         Prompts.ExitPrompt();
-        Console.ReadLine();
     }
 }

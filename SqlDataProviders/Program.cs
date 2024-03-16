@@ -1,6 +1,6 @@
-﻿using Spectre.Library;
-using SqlDataProviders.Classes;
+﻿using SqlDataProviders.Classes;
 using SqlDataProviders.Models;
+using static Spectre.Library.Prompts;
 
 namespace SqlDataProviders;
 
@@ -15,8 +15,7 @@ internal partial class Program
 
         ReadForRetirement();
 
-        Prompts.ExitPrompt();
-        Console.ReadLine();
+        ExitPrompt();
     }
 
     private static void AllContacts()

@@ -2,7 +2,7 @@
 using EntityFrameworkCore.Models;
 using Spectre.Console;
 using Spectre.Library;
-
+#nullable disable
 namespace EntityFrameworkCore;
 
 internal partial class Program

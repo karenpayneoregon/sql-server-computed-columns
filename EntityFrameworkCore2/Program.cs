@@ -1,8 +1,8 @@
 ﻿using EntityFrameworkCore2.Data;
 using EntityFrameworkCore2.Models;
 using Microsoft.EntityFrameworkCore;
-using Spectre.Library;
 using VersioningLibrary;
+using static Spectre.Library.Prompts;
 
 namespace EntityFrameworkCore2;
 
@@ -64,8 +64,7 @@ internal partial class Program
         context.Add(app1);
         Console.WriteLine($"Saved result: {context.SaveChanges()}");
 
-        Prompts.ExitPrompt();
-        Console.ReadLine();
+        ExitPrompt();
 
     }
     public static Table CreateTableEntityFramework()

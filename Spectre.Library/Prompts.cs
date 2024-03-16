@@ -1,4 +1,5 @@
 ﻿using Spectre.Console;
+using static System.Console;
 
 namespace Spectre.Library;
 public class Prompts
@@ -14,6 +15,6 @@ public class Prompts
         Render(new Rule($"[white on blue]{text}[/]")
             .RuleStyle(Style.Parse("cyan"))
             .Centered());
-        
+        ReadLine();
     }
 }

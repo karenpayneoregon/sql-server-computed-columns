@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net7.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>disable</Nullable>
 	</PropertyGroup>
@@ -18,16 +18,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="ConfigurationLibrary" Version="1.0.1" />
+		<PackageReference Include="ConfigurationLibrary" Version="1.0.6" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="ConsoleHelperLibrary" Version="1.0.0" />
+		<PackageReference Include="ConsoleHelperLibrary" Version="1.0.2" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<!-- ReSharper disable once VulnerablePackage -->
-		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.1" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>

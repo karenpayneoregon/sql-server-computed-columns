@@ -1,4 +1,5 @@
 ﻿using VersioningLibrary;
+using static Spectre.Library.Prompts;
 
 namespace AutoIncrementVersion;
 
@@ -21,8 +22,7 @@ internal partial class Program
         version = version.IncrementMajor(2);
 
         Console.WriteLine(version);
-        Console.ReadLine();
-
+        ExitPrompt();
     }
    
 }

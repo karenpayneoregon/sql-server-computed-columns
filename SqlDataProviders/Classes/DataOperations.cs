@@ -1,7 +1,7 @@
 ﻿using System.Data;
-using System.Data.SqlClient;
-using ConfigurationLibrary.Classes;
+using Microsoft.Data.SqlClient;
 using SqlDataProviders.Models;
+using static ConfigurationLibrary.Classes.ConfigurationHelper;
 
 namespace SqlDataProviders.Classes;
 internal class DataOperations
@@ -10,7 +10,7 @@ internal class DataOperations
     {
         List<Contact> list = new();
 
-        using var cn = new SqlConnection(ConfigurationHelper.ConnectionString());
+        using var cn = new SqlConnection(ConnectionString());
         using var cmd = new SqlCommand
         {
             Connection = cn,
@@ -39,11 +39,16 @@ internal class DataOperations
     {
         List<Contact> list = new();
 
-        using var cn = new SqlConnection(ConfigurationHelper.ConnectionString());
+        using var cn = new SqlConnection(ConnectionString());
         using var cmd = new SqlCommand
         {
             Connection = cn,
-            CommandText = "SELECT Id, FirstName, LastName, BirthDate, YearsOld, FullName, BirthYear FROM dbo.Contact WHERE (YearsOld > @Old);"
+            CommandText = 
+                """
+                SELECT Id, FirstName, LastName, BirthDate, YearsOld, FullName, BirthYear 
+                FROM dbo.Contact 
+                WHERE (YearsOld > @Old);
+                """
         };
 
         cmd.Parameters.Add("@Old", SqlDbType.Int).Value = yearsOld;
