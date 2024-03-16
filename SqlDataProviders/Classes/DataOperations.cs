@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using Dapper;
 using Microsoft.Data.SqlClient;
 using SqlDataProviders.Models;
 using static ConfigurationLibrary.Classes.ConfigurationHelper;
@@ -14,7 +15,11 @@ internal class DataOperations
         using var cmd = new SqlCommand
         {
             Connection = cn,
-            CommandText = "SELECT Id, FirstName, LastName, BirthDate, YearsOld, FullName, BirthYear FROM dbo.Contact;"
+            CommandText = 
+                """
+                SELECT Id, FirstName, LastName, BirthDate, YearsOld, FullName, BirthYear 
+                FROM dbo.Contact;
+                """
         };
 
         cn.Open();
@@ -32,9 +37,35 @@ internal class DataOperations
                 FullName = reader.GetString(5), BirthYear = reader.GetInt32(6)
             });
         }
+
         return list;
     }
+    
+    /// <summary>
+    /// Same as <seealso cref="ReadContacts()"/>
+    /// </summary>
+    public static List<Contact> ReadContactsDapper()
+    {
 
+        using var cn = new SqlConnection(ConnectionString());
+  
+        return cn.Query<Contact>("""
+                                 SELECT Id, FirstName, LastName, BirthDate, YearsOld, FullName, BirthYear
+                                 FROM dbo.Contact;
+                                 """).AsList(); 
+    }
+
+    public static List<Contact> ReadContactsDapper(int yearsOld)
+    {
+        List<Contact> list = new();
+
+        using var cn = new SqlConnection(ConnectionString());
+        return cn.Query<Contact>("""
+                                 SELECT Id, FirstName, LastName, BirthDate, YearsOld, FullName, BirthYear 
+                                 FROM dbo.Contact 
+                                 WHERE (YearsOld > @Old);
+                                 """, new {Old = yearsOld}).AsList();
+    }
     public static List<Contact> ReadContacts(int yearsOld)
     {
         List<Contact> list = new();

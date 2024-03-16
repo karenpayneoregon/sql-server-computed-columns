@@ -22,7 +22,7 @@ internal partial class Program
     {
         AnsiConsole.MarkupLine("[white on blue]All contacts[/]");
 
-        var contacts = DataOperations.ReadContacts();
+        var contacts = DataOperations.ReadContactsDapper();
 
         foreach (Contact item in contacts)
         {
@@ -35,8 +35,9 @@ internal partial class Program
     private static void ReadForRetirement()
     {
         int yearsOld = 65;
+
         AnsiConsole.MarkupLine($"[white on blue]Ready for retirement, age > [/][yellow on blue]{yearsOld}[/]");
-        var contacts = DataOperations.ReadContacts(yearsOld);
+        var contacts = DataOperations.ReadContactsDapper(yearsOld);
 
         foreach (Contact item in contacts)
         {

@@ -24,6 +24,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="ConsoleHelperLibrary" Version="1.0.2" />
+		<PackageReference Include="Dapper" Version="2.1.35" />
 	</ItemGroup>
 	<ItemGroup>
 		<!--<PackageReference Include="System.Data.SqlClient" Version="4.8.5" />-->
