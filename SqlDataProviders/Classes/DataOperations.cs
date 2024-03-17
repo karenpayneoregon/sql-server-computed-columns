@@ -55,6 +55,16 @@ internal class DataOperations
                                  """).AsList(); 
     }
 
+    public static async Task<List<Contact>> ReadContactsDapperAsync()
+    {
+        await using var cn = new SqlConnection(ConnectionString());
+
+        return  (await cn.QueryAsync<Contact>("""
+                                                  SELECT Id, FirstName, LastName, BirthDate, YearsOld, FullName, BirthYear
+                                                  FROM dbo.Contact;
+                                                  """)).AsList();
+    }
+
     public static List<Contact> ReadContactsDapper(int yearsOld)
     {
         List<Contact> list = new();

@@ -6,23 +6,23 @@ namespace SqlDataProviders;
 
 internal partial class Program
 {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
         AnsiConsole.MarkupLine("[yellow]Data provider[/]");
         Console.WriteLine();
 
-        AllContacts();
+        await AllContacts();
 
         ReadForRetirement();
 
         ExitPrompt();
     }
 
-    private static void AllContacts()
+    private static async Task AllContacts()
     {
         AnsiConsole.MarkupLine("[white on blue]All contacts[/]");
 
-        var contacts = DataOperations.ReadContactsDapper();
+        var contacts = await DataOperations.ReadContactsDapperAsync();
 
         foreach (Contact item in contacts)
         {
