@@ -60,8 +60,8 @@ internal class DataOperations
         await using var cn = new SqlConnection(ConnectionString());
 
         return  (await cn.QueryAsync<Contact>("""
-                                                  SELECT Id, FirstName, LastName, BirthDate, YearsOld, FullName, BirthYear
-                                                  FROM dbo.Contact;
+                                              SELECT Id, FirstName, LastName, BirthDate, YearsOld, FullName, BirthYear
+                                              FROM dbo.Contact;
                                               """)).AsList();
     }
 
