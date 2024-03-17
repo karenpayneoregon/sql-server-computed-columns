@@ -62,7 +62,7 @@ internal class DataOperations
         return  (await cn.QueryAsync<Contact>("""
                                                   SELECT Id, FirstName, LastName, BirthDate, YearsOld, FullName, BirthYear
                                                   FROM dbo.Contact;
-                                                  """)).AsList();
+                                              """)).AsList();
     }
 
     public static List<Contact> ReadContactsDapper(int yearsOld)
