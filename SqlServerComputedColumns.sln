@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spectre.Library", "Spectre.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameworkCore4", "EntityFrameworkCore4\EntityFrameworkCore4.csproj", "{5BA913DD-1427-493B-931E-05737DA7C808}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnityFrameworkCoreOffice", "EnityFrameworkCoreOffice\EnityFrameworkCoreOffice.csproj", "{9011ED08-E587-4237-B0B3-BE450BEDFFED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{5BA913DD-1427-493B-931E-05737DA7C808}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BA913DD-1427-493B-931E-05737DA7C808}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BA913DD-1427-493B-931E-05737DA7C808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9011ED08-E587-4237-B0B3-BE450BEDFFED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9011ED08-E587-4237-B0B3-BE450BEDFFED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9011ED08-E587-4237-B0B3-BE450BEDFFED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9011ED08-E587-4237-B0B3-BE450BEDFFED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
